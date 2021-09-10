@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
-  title = 'LoanApplication';
+  title = 'Home';
 }

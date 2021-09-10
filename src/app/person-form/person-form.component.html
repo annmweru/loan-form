@@ -1,10 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+<form [formGroup]="personForm"  (ngSubmit)="onSubmit()" >
+  <div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
 
-</body>
-</html>
+      <h1>Personal Details </h1>
+      <div class="form-group">
+        <label for="membershipNo">Membership Number</label>
+        <input required type="text" class="form-control" id="membershipNo" formControlName="membershipNo" aria-describedby="membershipNo" placeholder="Enter Membership No.">
+      </div>
+
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="firstName">First name</label>
+          <input required type="text" class="form-control" formControlName="firstName" id="firstName" placeholder="First name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="middleName">Password</label>
+          <input required type="text" class="form-control" id="middleName"  formControlName="middleName" placeholder="Enter middle name">
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="lastName">Last name</label>
+        <input required type="email" class="form-control" id="lastName"  formControlName="lastName" aria-describedby="emailHelp" placeholder="Last Name">
+      </div>
+
+      <div class="form-group">
+        <label for="idPassport">ID No/ Passport No.</label>
+        <input required type="email" class="form-control" id="idPassport" formControlName="idPassport" aria-describedby="emailHelp" placeholder="ID No/ Passport No.">
+      </div>
+
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="town">Town</label>
+          <input required type="text" class="form-control" formControlName="town" id="town" placeholder="Town">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="estate">Estate</label>
+          <input required type="text" class="form-control" id="estate"  formControlName="estate" placeholder="Estate">
+        </div>
+      </div>
+
+
+      <p>How long have you lived here?</p>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="yearsLived">Years</label>
+          <input required type="number" class="form-control" formControlName="yearsLived" id="yearsLived" placeholder="Years lived">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="months">Months</label>
+          <input required type="number" class="form-control" id="months"  formControlName="monthsLived" placeholder="Months">
+        </div>
+        <div class="form-group col-md-4">
+          <label class="mr-sm-2" for="rented">Type</label>
+          <select class="custom-select mr-sm-2" id="rented" formControlName="rented" >
+            <option value="1">Rented</option>
+            <option value="2">Private Owned</option>
+          </select>
+        </div>
+      </div>
+
+
+      <p>Marital status</p>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label class="mr-sm-2" for="maritalStatus">I am</label>
+          <select class="custom-select mr-sm-2" id="maritalStatus" formControlName="maritalStatus" >
+            <option value="1">Single</option>
+            <option value="2">Married</option>
+            <option value="3">Divorced</option>
+            <option value="4">Others</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="numberOfDependants">Number of dependants</label>
+          <input required type="number" class="form-control" id="numberOfDependants"  formControlName="numberOfDependents" placeholder="Dependents">
+        </div>
+
+      </div>
+
+
+      <button type="submit" class="btn btn-info btn-lg">Submit</button>
+
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</form>

@@ -1,1 +1,81 @@
-<p>employment-form works!</p>
+<form [formGroup]="employmentForm" (ngSubmit)="onSubmit()" >
+  <div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+
+      <h1>Employment Details</h1>
+      <div class="form-group">
+        <label for="applicantEmployer">Your Employer</label>
+        <input required type="text" class="form-control" id="applicantEmployer" formControlName="applicantEmployer" aria-describedby="applicantEmployer" placeholder="Your Employer">
+      </div>
+
+      <div class="form-group">
+        <label for="physicalAddress">Physical Address</label>
+        <input required type="text" class="form-control" id="physicalAddress" formControlName="physicalAddress" placeholder="Physical Address">
+      </div>
+
+      <div class="form-group">
+        <label for="postalAddress">Postal Address</label>
+        <input required type="text" class="form-control" id="postalAddress" formControlName="postalAddress" placeholder="Postal Address">
+      </div>
+
+      <div class="form-group">
+        <label for="telephoneNumber">Telephone number</label>
+        <input required type="text" class="form-control" id="telephoneNumber" formControlName="telephoneNumber" placeholder="Telephone number">
+      </div>
+
+      <div class="form-group">
+        <label for="designation">Designation</label>
+        <input required type="text" class="form-control" id="designation" formControlName="designation" placeholder="Designation">
+      </div>
+
+
+      <div class="form-group">
+        <label class="mr-sm-2" for="employmentTerms">Employment terms</label>
+        <select class="custom-select mr-sm-2" id="employmentTerms" formControlName="employmentTerms" >
+          <option value="1">Permanent</option>
+          <option value="2">Casual</option>
+          <option value="3">Contract</option>
+          <option value="4">Others</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label for="staffNo">Staff no.</label>
+        <input required type="text" class="form-control" id="staffNo" placeholder="Staff id" formControlName="staffNo">
+      </div>
+
+      <div class="form-group">
+        <label for="typeOfBusiness">Type of business</label>
+        <input required type="text" class="form-control" id="typeOfBusiness" placeholder="Type of business" formControlName="typeOfBusiness">
+      </div>
+
+      <div class="form-group">
+        <label for="yearsOfOperation">Years of operation</label>
+        <input required type="number" class="form-control" id="yearsOfOperation" placeholder="Years of operation" formControlName="yearOfOperation">
+      </div>
+
+      <div class="form-group">
+        <label for="businessIncome">Business Income</label>
+        <input required type="number" class="form-control" id="businessIncome" placeholder="Business income" formControlName="businessIncome">
+      </div>
+
+      <div class="form-group">
+        <label for="rentalIncome">Rental Income</label>
+        <input required type="number" class="form-control" id="rentalIncome" placeholder="Rental Income" formControlName="rentalIncome">
+      </div>
+
+      <div class="form-group">
+        <label for="otherIncome">Other income</label>
+        <input required type="number" class="form-control" id="otherIncome" placeholder="Other income" formControlName="otherIncome">
+      </div>
+
+
+      <button type="submit" class="btn btn-info btn-lg">Submit</button>
+      <a [routerLink]="['/apply/personal']" class="btn btn-lg btn-outline-info" style="margin: 12px;">Go back</a>
+
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</form>

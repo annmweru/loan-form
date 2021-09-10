@@ -1,0 +1,38 @@
+.hero  {
+  height: 100vh;
+}
+
+@media (min-width:480px)  {
+  .hero-image-container .hero-image{
+    width: 100vh;
+  }
+}
+
+@media (min-width:600px)  {
+  .hero-image-container {
+    height: 100vh;
+  }
+
+  .hero .hero-image {
+    height: 50vh;
+    margin-top: 20vh;
+  }
+
+  .hero-text-container {
+      height: 50vh;
+      margin-top: 20vh;
+  }
+}
+
+.hero-text-container h1 {
+  font-size: 64pt;
+}
+
+.hero-text-container p {
+  font-size: 15pt;
+}
+
+.hero-text-container a {
+  margin: 12px;
+}
+
