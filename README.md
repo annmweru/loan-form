@@ -1,9 +1,11 @@
 # LoanApplication
 This is a form for inquiring details from a user applying for the loan. For better user experience and to prevent exhaustion, the form has been divided into segments.
-It submits to a Spring Boot Remote HTTP Service.
+It  submits to Django REST API.
 
-## Development server
+##Install the angular
+To install the Angular CLI, open a terminal window and run the following command: npm install -g @angular/cli
 
+### Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
