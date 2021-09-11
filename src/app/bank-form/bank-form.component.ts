@@ -16,7 +16,7 @@ export class BankFormComponent implements OnInit {
   bankForm = this.formBuilder.group({
     accountName : "",
     accountNo: "",
-    bank: "",
+    bankName: "",
     bankCode: "",
     branch: "",
     branchCode: "",
@@ -24,7 +24,7 @@ export class BankFormComponent implements OnInit {
 
   onSubmit() :void {
     this.bankForm.reset()
-    this.router.navigateByUrl("/apply/bank")
+    this.router.navigateByUrl("/apply/particulars")
   }
 
   ngOnInit(): void {
