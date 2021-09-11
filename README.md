@@ -2,7 +2,7 @@
 This is a form for inquiring details from a user applying for the loan. For better user experience and to prevent exhaustion, the form has been divided into segments.
 It  submits to Django REST API.
 
-##Install the angular
+## Install the angular
 To install the Angular CLI, open a terminal window and run the following command: npm install -g @angular/cli
 
 ### Development server
