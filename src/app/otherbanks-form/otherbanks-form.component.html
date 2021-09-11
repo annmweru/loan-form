@@ -1,1 +1,69 @@
-<p>otherbanks-form works!</p>
+<form [formGroup]="otherBanks" (ngSubmit)="onSubmit()" >
+  <div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+
+      <h1>Loans you have in other banks</h1>
+
+      <table class="table">
+        <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Bank</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Date</th>
+          <th scope="col">Repayment Period</th>
+          <th scope="col">Balance</th>
+        </tr>
+        </thead>
+        <tbody class="cart-item" *ngFor="let item of keys">
+          <tr>
+            <th scope="row">{{item + 1}}</th>
+            <td>{{ loans[item].bankName}}</td>
+            <td>Ksh. {{ loans[item].amountAdvanced}}</td>
+            <td>{{ loans[item].dateGranted}}</td>
+            <td>{{ loans[item].repaymentPeriod}}</td>
+            <td>Ksh. {{ loans[item].outstandingBalance }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Click / Tap Add to list to add another Loan to the list</h2>
+
+      <div class="form-group">
+        <label for="bankName">Bank Name</label>
+        <input required type="text" class="form-control" id="bankName" formControlName="bankName"  placeholder="Bank name">
+      </div>
+
+      <div class="form-group">
+        <label for="amountAdvanced">Amount advanced</label>
+        <input required type="number" class="form-control" id="amountAdvanced" formControlName="amountAdvanced"  placeholder="Amount advanced">
+      </div>
+
+      <div class="form-group">
+        <label for="dateGranted">Date granted</label>
+        <input required type="date" class="form-control" id="dateGranted" formControlName="dateGranted"  placeholder="Date">
+      </div>
+
+      <div class="form-group">
+        <label for="repaymentPeriod">Repayment period</label>
+        <input required type="text" class="form-control" id="repaymentPeriod" formControlName="repaymentPeriod"  placeholder="Repayment period">
+      </div>
+
+      <div class="form-group">
+        <label for="amountAdvanced">Outstanding Balance</label>
+        <input required type="number" class="form-control" id="outstandingBalance" formControlName="outstandingBalance"  placeholder="Outstanding balance ">
+      </div>
+
+      <a [routerLink]="['/apply/bank']" class="btn btn-lg btn-outline-info" style="margin: 12px;">Go back</a>
+
+      <div class="btn-group btn-group-lg" role="group" style="text-align: center">
+       <button type="button" class="btn btn-info " (click)="addToList()">Add to list</button>
+       <button type="submit"  class="btn btn-secondary">Submit</button>
+     </div>
+
+
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</form>
