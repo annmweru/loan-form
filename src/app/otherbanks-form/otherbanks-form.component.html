@@ -16,7 +16,7 @@
           <th scope="col">Balance</th>
         </tr>
         </thead>
-        <tbody class="cart-item" *ngFor="let item of keys">
+        <tbody class="cart-item" *ngFor="let item of loans.keys()">
           <tr>
             <th scope="row">{{item + 1}}</th>
             <td>{{ loans[item].bankName}}</td>
