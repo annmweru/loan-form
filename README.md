@@ -1,6 +1,6 @@
 # LoanApplication
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
+This is a form for inquiring details from a user applying for the loan. For better user experience and to prevent exhaustion, the form has been divided into segments.
+It submits to a Spring Boot Remote HTTP Service.
 
 ## Development server
 
