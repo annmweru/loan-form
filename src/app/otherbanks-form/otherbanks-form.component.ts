@@ -44,6 +44,8 @@ export class OtherbanksFormComponent implements OnInit {
     }
 
     this.otherBanks.reset()
+
+    this.router.navigateByUrl("/apply/success")
   }
 
   addToList(): void {

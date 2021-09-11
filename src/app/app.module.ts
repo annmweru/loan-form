@@ -12,6 +12,7 @@ import { EmploymentFormComponent } from './employment-form/employment-form.compo
 import { BankFormComponent } from './bank-form/bank-form.component';
 import { ParticularsFormComponent } from './particulars-form/particulars-form.component';
 import { OtherbanksFormComponent } from './otherbanks-form/otherbanks-form.component';
+import { SuccessComponent } from './success/success.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { OtherbanksFormComponent } from './otherbanks-form/otherbanks-form.compo
     EmploymentFormComponent,
     BankFormComponent,
     ParticularsFormComponent,
-    OtherbanksFormComponent
+    OtherbanksFormComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,7 @@ import { OtherbanksFormComponent } from './otherbanks-form/otherbanks-form.compo
       {path: "apply/otherbanks", component: OtherbanksFormComponent},
       {path: "apply/bank", component: BankFormComponent},
       {path: "apply/particulars", component: ParticularsFormComponent},
+      {path: "apply/success", component: SuccessComponent}
     ])
   ],
   providers: [],
